@@ -1,0 +1,50 @@
+name: "Sphinx: Render docs"
+
+on:
+  pull_request:
+  push:
+    branches:
+    - main
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - name: Cache Python packages
+      uses: actions/cache@v4
+      with:
+        # Cache the Python package environment, excluding pip and setuptools installed by setup-python
+        path: |
+          ~/.cache/pip
+          ${{ env.pythonLocation }}/bin/*
+          ${{ env.pythonLocation }}/include
+          ${{ env.pythonLocation }}/lib/python*/site-packages/*
+          !${{ env.pythonLocation }}/bin/pip*
+          !${{ env.pythonLocation }}/lib/python*/site-packages/pip*
+          !${{ env.pythonLocation }}/lib/python*/site-packages/setuptools*
+        key: ${{ env.pythonLocation }}-${{ hashFiles('requirements.txt') }}
+    - name: Install requirements
+      run: |
+        pip install -r requirements.txt
+    - name: Build HTML
+      run: sphinx-build -M html source/ build/
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: html-docs
+        path: build/html/
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: build/html
