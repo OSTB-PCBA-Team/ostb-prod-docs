@@ -6,7 +6,7 @@ EchoEar 支持 USB-Type-C、锂电池和磁吸连接器三种供电方式，700m
 
 EchoEar底部有一个电源开关，不论供电方式如何，单击该按键都可以切换开机和关机状态。
 
-<img src="./images/user_guide/img_001.png" style="zoom: 67%;" />
+![](./images/user_guide/img_001.png)
 
 
 ## 开始体验
@@ -17,19 +17,19 @@ EchoEar底部有一个电源开关，不论供电方式如何，单击该按键�
 
 如果此时设备还未连接过 Wi-Fi 网络，设备会以 20 秒时间间隔循环播报 “我还没有连接网络，请帮我配置网络”，并且屏幕上方会显示相应的 “Wi-Fi 连接” 动态图标。
 
-<img src="./images/user_guide/img_002.png" style="zoom:50%;" />
+![](./images/user_guide/img_002.png)
 
 2.长按屏幕，设备会进入 “系统 App” 模式，此时屏幕显示具有各种内置 App 应用的 “主界面”。
 
-<img src="./images/user_guide/img_003.png" style="zoom:50%;" />
+![](./images/user_guide/img_003.png)
 
 
 3.在 “主界面” 中点击 "Settings" App 图标，然后点击 “WLAN” 进入 Wi-Fi 配置界面。
 > Wi-Fi 配置页面不会在 5 秒无操作时自动返回 “AI 对话” 模式
 
-<img src="./images/user_guide/img_004.png" style="zoom: 50%;" />
+![](./images/user_guide/img_004.png)
 
-<img src="./images/user_guide/img_005.png" style="zoom: 50%;" />
+![](./images/user_guide/img_005.png)
 
 
 4.开启 WLAN 开关后，系统会扫描并显示 2.4GHz 可用网络。
@@ -38,9 +38,9 @@ EchoEar底部有一个电源开关，不论供电方式如何，单击该按键�
 
 > Wi-Fi 配置页面不会在 5 秒无操作时自动返回“AI 对话” 模式
 
-<img src="./images/user_guide/img_006.png" style="zoom:50%;" />
+![](./images/user_guide/img_006.png)
 
-<img src="./images/user_guide/img_007.png" style="zoom:50%;" />
+![](./images/user_guide/img_007.png)
 
 5.网络连接后，正常情况下，设备会依次播报：
 
@@ -67,7 +67,7 @@ EchoEar底部有一个电源开关，不论供电方式如何，单击该按键�
 
 #### 步骤1：创建一个智能体
 
-1. 登录（注册）扣子[开发平台](https://www.coze.cn/home)。
+1. 登录（注册）扣子[开发平台](https://www.coze.cn/home)
 
 2. 登录之后在页面左上角单击＋。
 
