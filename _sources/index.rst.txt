@@ -32,4 +32,5 @@ AI产品
 
    details/ai/xiaozhi-1st/index
    details/ai/echoear/index
+   details/badge/index
 
